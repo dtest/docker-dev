@@ -10,5 +10,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # start ssh-agent and add default id_rsa
-eval "$(ssh-agent -s)" >> /dev/null
-ssh-add ~/.ssh/id_rsa
+if [ -f ~/.ssh/id_rsa ]; then
+  eval "$(ssh-agent -s)" >> /dev/null
+  ssh-add ~/.ssh/id_rsa
+fi

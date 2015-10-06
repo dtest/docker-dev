@@ -12,4 +12,4 @@ docker run --rm -v /Users/<homedir>:/var/shared -h devbox -it dtest/docker-dev
 
 ## What it requires locally
 
-This container will mount your homedirectory to /var/shared. It then attempts to add an ~/.ssh/id_rsa to the ssh-agent, which is helpful for pushing private git repositories.
+This container will mount your homedirectory to /var/shared. It then adds the ~/.ssh/id_rsa to the ssh-agent if the file exists, which is helpful for pushing private git repositories.
